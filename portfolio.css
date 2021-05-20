@@ -71,12 +71,23 @@ body {
     padding: 10px;
     border-radius: 50%;
     width: 300px;
-    height: 300px;
+    height: 310px;
+    transition: 1s;
+    overflow: auto;
 }
 
 .profilepic {
     display: flex;
     justify-content: center;
+}
+
+.profilepic img:hover {
+    display: flex;
+    width: 30%;
+    height: 30%;
+    border-radius: 0%;
+    overflow: auto;
+    transition: 1s;
 }
 
 .body {
@@ -96,6 +107,7 @@ body {
     padding: 5px;
     color: white;
     font-size: 20px;
+    text-align: center;
 }
 
 .icon {
@@ -114,7 +126,9 @@ body {
 }
 
 .icon i:hover {
-    color: orangered;
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
+    border-radius: 12%;
 }
 
 .contact {
@@ -310,4 +324,35 @@ footer {
 .hobby h1 {
     text-align: center;
     font-size: 20px;
+}
+
+spam {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.flag img {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+
+.coup {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.coup:hover {
+    color: #047bf1;
+    font-size: 21px;
+    transition: 0.5s;
 }
