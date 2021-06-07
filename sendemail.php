@@ -21,7 +21,7 @@
            $mail->SMTPAuth = true;
            $mail->Username = 'maybeanna.dev@gmail.com'; // gmail for (SMTP server)
            # handout: begin-exclude
-           $mail->password = 'ana-security>1122';
+           $mail->password = '';
            # handout: end-exclude
            
            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
