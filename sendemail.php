@@ -36,14 +36,14 @@
             
             $mail->send();
             $alert = '<div class="alert-sucess">
-                    <span>
+                    <spam>
                     Your Message is sent! Thank you for your feedback.
-                     </span>
+                     </spam>
                     </div>';
 
        } catch(Exception $e){
         $alert = '<div class="alert-failed">
-                <span>' .$e->getMessage().'</span>
+                <spam>' .$e->getMessage().'</spam>
                 </div>';
        }
     }
