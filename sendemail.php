@@ -17,36 +17,42 @@
 
        try{
            $mail->isSMTP();
-           $mail->Host ='ana.smtpserver@gmail.com';
+           $mail->SMTPDebug = 2;
+           $mail->Host ='gmail-smtp-msa.l.google.com ';
            $mail->SMTPAuth = true;
+           $mail->SMTPAutoTLS = true; 
            $mail->Username = 'ana.smtpserver@gmail.com'; // gmail for (SMTP server)
            # handout: begin-exclude
-           $mail->password = 'smptSecure-$erver';
+           $mail->password = 'smtp-Secure$ervice';
            # handout: end-exclude
            
            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
            $mail->Port ='578';
-
+        //receipent 
             $mail->setFrom('ana.smtpserver@gmail.com'); // gmail of SMTP server
             $mail->addAddress('nayhtetkyaw.dev@gamil.com');  //gmail for receiving messages
 
+        //attachments
+            // $mail->addAttachment('var/tmp/file.tar.gz');
+            // $mail->addAttachment('tmp/image.jpg', 'new.jpg');
+            
 
+        //content
             $mail->isHTML(true);
-            $mail->Subject = 'Message received (portfolio)';
+            $mail->Subject = 'Message received!';
             $mail->Body = '<h3>Name : $name <br>Email: $email 
             <br>Message : $message</h3>';
             
             $mail->send();
             $alert = '<div class="alert-sucess">
-                    <spam>
-                    Your Message is sent! Thank you for your feedback.
-                     </spam>
-                    </div>';
-
+                        <spam>
+                            Your Message is sent! Thank you for your feedback.
+                        </spam>
+                     </div>';
        } catch(Exception $e){
         $alert = '<div class="alert-failed">
-                <spam>' .$e->getMessage().'</spam>
-                </div>';
+                    <spam>' .$e->getMessage().'</spam>
+                  </div>';
        }
     }
 
