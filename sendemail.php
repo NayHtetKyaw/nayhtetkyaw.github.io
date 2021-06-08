@@ -17,18 +17,20 @@
 
        try{
            $mail->isSMTP();
-           $mail->Host ='smtp.gmail.com';
+           $mail->Host ='ana.smtpserver@gmail.com';
            $mail->SMTPAuth = true;
-           $mail->Username = 'maybeanna.dev@gmail.com'; // gmail for (SMTP server)
+           $mail->Username = 'ana.smtpserver@gmail.com'; // gmail for (SMTP server)
            # handout: begin-exclude
-           $mail->password = '';
+           $mail->password = 'smptSecure-$erver';
            # handout: end-exclude
            
            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
            $mail->Port ='578';
 
-            $mail->setFrom('maybeanna.dev@gamil.com'); // gmail of SMTP server
+            $mail->setFrom('ana.smtpserver@gmail.com'); // gmail of SMTP server
             $mail->addAddress('nayhtetkyaw.dev@gamil.com');  //gmail for receiving messages
+
+
             $mail->isHTML(true);
             $mail->Subject = 'Message received (portfolio)';
             $mail->Body = '<h3>Name : $name <br>Email: $email 
