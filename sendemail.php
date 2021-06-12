@@ -23,7 +23,7 @@
            $mail->SMTPAutoTLS = true; 
            $mail->Username = 'ana.smtpserver@gmail.com'; // gmail for (SMTP server)
            # handout: begin-exclude
-           $mail->password = 'smtp-Secure$ervice';
+           $mail->password = '';
            # handout: end-exclude
            
            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
